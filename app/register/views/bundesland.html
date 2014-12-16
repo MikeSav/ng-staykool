@@ -1,0 +1,21 @@
+<div class="container-fluid login-form">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+
+      <!-- Logo -->
+      <a data-ng-href="/"><img src="images/logos/logo_de_a_se@2x.png" alt="Stayfriends" class="img-responsive login-logo"></a>
+
+      <h3>{{ 'register.selectBundesland' | translate }}</h3>
+      <!-- repeat items -->
+      <div data-ng-repeat="land in bundeslands" data-on-finish-render class="list-div">
+        <a data-ng-href="register/{{ land.url }}">{{ land.land }}</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div data-ng-include="'common/switch-language/views/switch-language.html'" data-ng-controller="LanguageCtrl" class="text-center"></div>
+</div>
+
+<!-- footer -->
+<div data-ng-include="'common/footer/footer.html'"></div>

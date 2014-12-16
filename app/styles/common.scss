@@ -1,0 +1,23 @@
+@import "variables.scss";
+
+/* Sticky Footer */
+html, body {
+  height: 100%;
+}
+
+body {
+  background: $grey;
+  font-family: 'Merriweather';
+}
+
+/* Common Font Sizing */
+
+.font-large-bold {
+  font-size: $fontSize-L;
+  font-weight: 700;
+}
+
+.loading-gif {
+  margin-top: $marginM;
+  margin-bottom: $marginM;
+}

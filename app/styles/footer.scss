@@ -1,0 +1,44 @@
+@import "variables.scss";
+
+.footer {
+
+  margin-top: $marginM;
+
+  div {
+    font-size: $fontSize-XS;
+    padding-bottom: $paddingS;
+
+    .col-xs-7 {
+      padding-left: 0;
+    }
+
+    .col-xs-5 {
+      padding-right: 0;
+    }
+
+    ul {
+      margin-left: 0;
+      padding-left: 0;
+      list-style-type: none;
+
+      li {
+        float: right;
+        padding-left: $paddingMin;
+        margin: 0;
+
+        a {
+
+          &:hover {
+            text-decoration: underline;
+            color: $orange;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

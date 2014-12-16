@@ -1,0 +1,65 @@
+<div class="container-fluid home-menu text-center">
+  <div class="row">
+    <div class="col-xs-2 width-20-percent dropdown" dropdown on-toggle="toggled(open)">
+      <a href class="dropdown-toggle" dropdown-toggle>
+      <span class="icon-ic_menu_oc_22"></span>
+      <div>{{ 'home.menu.title.menu' | translate }}</div>
+      </a>
+
+      <ul class="dropdown-menu">
+        <li>
+          IMG PROFILE NAME, Etc..</a>
+        </li>
+        <li>
+          <a ng-href="/classmates">{{ 'home.submenu.link.classmates' | translate }}</a>
+        </li>
+        <li>
+          <a ng-href="/classmates">{{ 'home.submenu.link.contacts' | translate }}</a>
+        </li>
+        <li>
+          <a ng-href="/classmates">{{ 'home.submenu.link.postbox' | translate }}</a>
+        </li>
+        <li>
+          <a ng-href="/classmates">{{ 'home.submenu.link.games' | translate }}</a>
+        </li>
+        <li>
+          <a ng-href="/classmates">{{ 'home.submenu.link.xmas' | translate }}</a>
+        </li>
+        <li>
+          <a ng-href="/classmates">{{ 'home.submenu.link.gold' | translate }}</a>
+        </li>
+        <li>
+          <a ng-href="/classmates">{{ 'home.submenu.link.website' | translate }}</a>
+        </li>
+        <li>
+          <a href data-ng-click="logout();">{{ 'home.submenu.link.logout' | translate }}</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="col-xs-2 width-20-percent">
+      <span class="icon-ic_news_oc_22"></span>
+      <div>{{ 'home.menu.title.neues' | translate }}</div>
+    </div>
+    <div class="col-xs-2 width-20-percent">
+      <span class="icon-ic_message_oc_22"></span>
+      <div>{{ 'home.menu.title.postbox' | translate }}</div>
+    </div>
+    <div class="col-xs-2 width-20-percent">
+      <span class="icon icon-ic_visits_oc_22"></span>
+      <div>{{ 'home.menu.title.visitor' | translate }}</div>
+    </div>
+    <div class="col-xs-2 width-20-percent">
+      <span class="icon-ic_search_oc_22"></span>
+      <div>{{ 'home.menu.title.search' | translate }}</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div data-ng-include="'common/switch-language/views/switch-language.html'" data-ng-controller="LanguageCtrl" class="text-center"></div>
+
+<!-- footer -->
+<div data-ng-include="'common/footer/footer.html'"></div>

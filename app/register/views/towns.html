@@ -1,0 +1,24 @@
+<div class="container-fluid login-form">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+
+      <!-- Logo -->
+      <a data-ng-href="/"><img src="images/logos/logo_de_a_se@2x.png" alt="Stayfriends" class="img-responsive login-logo"></a>
+
+      <h3>{{ 'register.selectTown' | translate }}</h3>
+      <img src="images/loaders/orange-loader.gif" data-ng-show="!loaded" class="loading-gif">
+      <!-- repeat items -->
+      <input type="text" data-ng-model="townFilter" data-ng-show="loaded" class="sf-input">
+
+      <div data-ng-repeat="town in towns | filter: townFilter" data-on-finish-render class="list-div">
+        <a data-ng-href="register/{{ bundesland }}/{{ town.STName | lowercase }}">{{ town.STName }}</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div data-ng-include="'common/switch-language/views/switch-language.html'" data-ng-controller="LanguageCtrl" class="text-center"></div>
+</div>
+
+<!-- footer -->
+<div data-ng-include="'common/footer/footer.html'"></div>

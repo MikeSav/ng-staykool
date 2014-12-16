@@ -1,0 +1,38 @@
+=====================
+Yeoman Slide Notes
+=====================
+
+1. Slide 1 - just say hi
+2. Slide 2 - read and produce new project
+3. Add new features
+4. Delete bower files and reinstall then install UI
+
+To SuMMERIZE: YeoMan is Mavern for JavaScript
+
+=====================
+Angular Presentation
+=====================
+
+1. Go through the first slides, then
+
+Show JSBin examples:
+
+http://jsbin.com/cutafiwaba/5/edit - JQuery
+http://jsbin.com/jizexe/8/edit - AngularJS NO WAY
+http://jsbin.com/jizexe/6/edit - AngularJS 2 Way
+
+Most templating systems bind data in only one direction: they merge template and model components together into a view. After the merge occurs, changes to the model or related sections of the view are NOT automatically reflected in the view. Worse, any changes that the user makes to the view are not reflected in the model. This means that the developer has to write code that constantly syncs the view with the model and the model with the view.
+
+Go to the main app and explain, the file structure then
+
+Explain the app file, ng-app tag
+Run the app explaining routes, views,
+Directives, ng-repeat and routing.... and services using DI
+Forms
+
+We Don't need jQuery... but you can use it!
+
+Te Future of AngularJS
+
+
+

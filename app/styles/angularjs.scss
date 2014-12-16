@@ -1,0 +1,11 @@
+@import "variables.scss";
+
+input.ng-invalid.ng-dirty,
+input.ng-invalid-maxlength.ng-dirty,
+input.ng-invalid-minlength.ng-dirty,
+input.ng-invalid-email.ng-dirty {
+    color: $warningBg !important;
+    background-color: $warning !important;
+    border-color: $warningBg !important;
+}
+

@@ -1,0 +1,97 @@
+<div class="container-fluid login-form">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+
+      <!-- Logo -->
+      <a data-ng-href="/">
+        <img src="images/logos/logo_de_a_se@2x.png" alt="Stayfriends" class="img-responsive login-logo">
+      </a>
+
+      <!-- form items -->
+      <form name="registerForm" data-ng-submit="register(user)" novalidate>
+
+        <h6>{{ 'register.youSelectedSchool' | translate }} SchoolName</h6>
+
+        <h3>{{ 'register.enterDetails' | translate }}</h3>
+
+        <!-- Active School Years Here - two select boxes -->
+        <input type="text" name="firstName" ng-model="user.firstName" class="sf-input"
+               placeholder="{{ 'register.input.placeholder.firstName' | translate }}"
+               data-validation-pattern="inputDefaultRequired">
+
+        <div data-ng-messages="registerForm.firstName.$error" data-ng-messages-include="validationMessages"
+             data-ng-if="registerForm.firstName.$dirty">
+        </div>
+
+        <br>
+        <input type="text" name="middleName" ng-model="user.middleName" class="sf-input"
+               placeholder="{{ 'register.input.placeholder.middleName' | translate }}"
+               data-validation-pattern="inputDefault">
+
+        <div data-ng-messages="registerForm.middleName.$error" data-ng-messages-include="validationMessages"
+             data-ng-if="registerForm.middleName.$dirty">
+        </div>
+
+        <br>
+        <input type="text" name="lastName" ng-model="user.lastName" class="sf-input"
+               placeholder="{{ 'register.input.placeholder.lastName' | translate }}"
+               data-validation-pattern="inputDefaultRequired">
+
+        <div data-ng-messages="registerForm.lastName.$error" data-ng-messages-include="validationMessages"
+             data-ng-if="registerForm.lastName.$dirty">
+        </div>
+
+        <br>
+        <input type="date" ng-model="user.dob" class="sf-input"
+               placeholder="{{ 'register.input.placeholder.dob' | translate }}">
+        <br>
+
+        <input type="email" name="email" ng-model="user.email" class="sf-input"
+               placeholder="{{ 'register.input.placeholder.email' | translate }}">
+
+        <div data-ng-messages="registerForm.email.$error" data-ng-messages-include="validationMessages"
+             data-ng-if="registerForm.email.$dirty">
+        </div>
+
+        <br>
+        <input type="password" name="password" ng-model="user.password" class="sf-input"
+               placeholder="{{ 'register.input.placeholder.password' | translate }}"
+               data-validation-pattern="lengthsOnlyRequired">
+
+        <div data-ng-messages="registerForm.password.$error" data-ng-messages-include="validationMessages"
+             data-ng-if="registerForm.password.$dirty">
+        </div>
+
+        <br>
+        <input type="password" name="repeatPassword" ng-model="user.repeatPassword" class="sf-input"
+               placeholder="{{ 'register.input.placeholder.repeatPassword' | translate }}"
+               data-validation-pattern="lengthsOnlyRequired">
+
+        <div data-ng-messages="registerForm.repeatPassword.$error" data-ng-messages-include="validationMessages"
+             data-ng-if="registerForm.repeatPassword.$dirty">
+        </div>
+        <br>
+
+        <input type="submit"
+               class="btn btn-orange font-large-bold"
+               value="{{ 'register.registerBtn' | translate }}"
+               data-ng-disabled="registerForm.$invalid">
+      </form>
+
+      <div data-ng-include="'common/switch-language/views/switch-language.html'" data-ng-controller="LanguageCtrl"
+           class="text-center"></div>
+
+      <!-- this could be in a remote file, but for demo we will put in a ng-template -->
+      <script type="text/ng-template" id="validationMessages">
+        <div data-ng-message="required">{{ 'register.validationError.required' | translate }}</div>
+        <div data-ng-message="minlength">{{ 'register.validationError.minLength' | translate }}</div>
+        <div data-ng-message="maxlength">{{ 'register.validationError.maxLength' | translate }}</div>
+        <div data-ng-message="email">{{ 'register.validationError.email' | translate }}</div>
+      </script>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<div data-ng-include="'common/footer/footer.html'"></div>
+

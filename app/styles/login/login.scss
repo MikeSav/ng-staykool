@@ -1,0 +1,56 @@
+@import "../variables.scss";
+
+.login-form {
+  margin-top: $marginS;
+  min-height: $min-handy-height;
+
+  a:nth-child(7) {
+    margin-top: $marginS;
+    display: inline-block;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .list-div {
+    margin-bottom: $marginMin;
+  }
+
+  .list-div:last-child {
+    margin-bottom: $marginM;
+  }
+
+  .error {
+    color: $warningBg;
+    padding-top: $paddingS;
+  }
+
+  // overwrite of bootstrap class
+  .img-responsive {
+    display: inline;
+  }
+
+  .login-logo {
+    margin-bottom: $marginL;
+  }
+
+  .sf-input {
+    margin-bottom: $marginM;
+    width: 80%;
+  }
+
+  .btn {
+    width: 80%;
+    margin-bottom: $marginM;
+  }
+
+  #languages {
+
+    img {
+      padding: 0 5px;
+      height: 30px;
+    }
+
+  }
+}

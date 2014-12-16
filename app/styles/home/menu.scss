@@ -1,0 +1,56 @@
+@import "variables.scss";
+
+.home-menu {
+  background-color: $blue;
+  color: $white;
+  font-size: 0.9em;
+  padding-top: $paddingSM;
+  padding-bottom: $paddingSM;
+
+  // overwrite bootstrap
+
+  .width-20-percent {
+    width: 20% !important;
+    font-size: 10px;
+    text-align: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    span {
+      font-size: 4em !important;
+    }
+
+    div {
+      padding-top: $paddingMin;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+
+    // overwrite bootstrap
+    .dropdown-menu {
+
+      margin-top: $marginSM;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      text-align: left;
+
+      li {
+
+        a {
+          color: $darkergrey;
+          text-decoration: none;
+          border-bottom: 1px solid $darkgrey;
+          padding-top: $paddingS;
+          padding-bottom: $paddingS;
+          display: block;
+        }
+      }
+
+    }
+
+  }
+
+}

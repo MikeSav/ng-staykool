@@ -1,0 +1,43 @@
+<div class="container-fluid login-form">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+
+      <!-- Logo -->
+      <a data-ng-href="/"><img src="images/logos/logo_de_a_se@2x.png" alt="Stayfriends" class="img-responsive login-logo"></a>
+
+      <!-- form items -->
+      <form name="loginForm" data-ng-submit="login(user)" novalidate>
+        <input type="email"
+               ng-model="user.username" class="sf-input"
+               placeholder="{{ 'login.input.placeholder.username' | translate }}"
+               data-validation-pattern="inputEmailRequired"
+               data-clear-error-message>
+        <br>
+        <input type="password" ng-model="user.password" class="sf-input" placeholder="{{ 'login.input.placeholder.password' | translate }}" data-validation-pattern="lengthsOnlyRequired">
+        <br>
+        <!-- ToDo: Why are we using ng-href? -->
+        <a data-ng-href="/passwordforget">{{ 'login.href.passwordForget' | translate }}</a>
+        <br>
+        <a data-ng-href="/register">{{ 'login.href.register' | translate }}</a>
+        <br>
+        <div class="error" data-ng-show="errorFound">
+          {{ 'login.href.register.notFound' | translate }}
+        </div>
+        <br>
+        <input type="submit"
+               class="btn btn-orange font-large-bold"
+               value="{{ 'login.loginBtn' | translate }}"
+               data-validation-pattern="lengthsOnlyRequired"
+               data-ng-disabled="loginForm.$invalid">
+        <br>
+        <input type="button" class="btn btn-fb" value="{{ 'login.loginBtnFB' | translate }}">
+      </form>
+
+      <div data-ng-include="'common/switch-language/views/switch-language.html'" data-ng-controller="LanguageCtrl" class="text-center"></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<div data-ng-include="'common/footer/footer.html'"></div>
