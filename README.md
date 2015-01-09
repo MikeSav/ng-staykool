@@ -4,7 +4,7 @@
 
 ### 0. Prerequisites
 - [NodeJS & NPM](http://www.nodejs.org)
-- [Ruby](htts://www.ruby-lang.org) (On MacOS and Linux you probably already have it installed)
+- [Ruby](http://www.ruby-lang.org) (On MacOS and Linux you probably already have it installed)
 - [Compass](http://compass-style.org/) (For compiling SASS / SCSS)
 
 **If you not already have:**
